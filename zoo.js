@@ -116,10 +116,10 @@ class ZooAPIClient {
       if (response.status === 200) {
         return response.data.ip;
       } else {
-        throw new Error(`Không thể kiểm tra IP của proxy. Status code: ${response.status}`);
+        throw new Error(`Unable to check proxy IP. Status code: ${response.status}`);
       }
     } catch (error) {
-      throw new Error(`Error khi kiểm tra IP của proxy: ${error.message}`);
+      throw new Error(`Error when checking proxy IP: ${error.message}`);
     }
   }
 
@@ -407,7 +407,7 @@ class ZooAPIClient {
         return response.data;
       }
     } catch (error) {
-      this.log(`Error when joining Aliance: ${error.message}`, "error");
+      this.log(`Error when joining Alliance: ${error.message}`, "error");
       return { success: false, error: error.message };
     }
   }
